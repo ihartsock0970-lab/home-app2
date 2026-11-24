@@ -119,16 +119,69 @@ document.addEventListener('input',e=>{if(e.target.id==='homeSearch')searchHome(e
 
 // HOME 0.5.1: entertainment launcher. Native app schemes are best-effort on iOS.
 const dockApps=[
- {id:'netflix',name:'Netflix',scheme:'nflx://',web:'https://www.netflix.com/',art:'<svg viewBox="0 0 64 64" aria-hidden="true"><path fill="#b00612" d="M20 10h8v44l-8 2zM36 10h8v46l-8-2z"/><path fill="#f01628" d="M20 10h8l16 46-9-2z"/></svg>'},
- {id:'hulu',name:'Hulu',scheme:'hulu://',web:'https://www.hulu.com/',art:'<span class="hulu-word">hulu</span>'},
- {id:'peacock',name:'Peacock',scheme:'peacock://',web:'https://www.peacocktv.com/',art:'<span class="peacock-word">peacock<span class="peacock-dots"><i></i><i></i><i></i><i></i><i></i><i></i></span></span>'},
- {id:'prime',name:'Prime Video',scheme:'aiv://',web:'https://www.primevideo.com/',art:'<svg viewBox="0 0 64 64" aria-hidden="true"><text x="32" y="27" font-size="17" font-weight="700" text-anchor="middle" fill="white">prime</text><text x="32" y="38" font-size="13" font-weight="600" text-anchor="middle" fill="white">video</text><path d="M13 44Q31 55 48 43m-6-1 8-1-2 7" fill="none" stroke="white" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></svg>'},
- {id:'disney',name:'Disney+',scheme:'disneyplus://',web:'https://www.disneyplus.com/',art:'<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M9 26 Q32 3 56 25" fill="none" stroke="#79e6f2" stroke-width="1.8" stroke-linecap="round"/><text x="28" y="39" font-family="Georgia,serif" font-style="italic" font-weight="bold" font-size="16" letter-spacing="-1" text-anchor="middle" fill="white">Disney</text><path d="M49 30v12m-6-6h12" stroke="white" stroke-width="2.3" stroke-linecap="round"/></svg>'},
- {id:'music',name:'Apple Music',scheme:'music://',web:'https://music.apple.com/',art:'<svg viewBox="0 0 64 64" aria-hidden="true"><path fill="white" d="M27 16v29c-2-1-5-1-8 0-5 2-7 6-5 9 2 4 7 4 12 2 4-2 6-5 6-9V26l17-4v17c-2-1-5-1-8 0-5 2-7 6-5 9 2 4 7 4 12 2 4-2 6-5 6-9V10z" transform="translate(-1 -2)"/></svg>'}
+  {
+    "id": "netflix",
+    "name": "Netflix",
+    "scheme": "nflx://",
+    "web": "https://www.netflix.com/",
+    "art": "https://cdn.mos.cms.futurecdn.net/sZKx8M5MGrKjk7L7748Dkc.jpg",
+    "alternate": "https://cdn.mos.cms.futurecdn.net/sZKx8M5MGrKjk7L7748Dkc.jpg",
+    "initial": "N"
+  },
+  {
+    "id": "hulu",
+    "name": "Hulu",
+    "scheme": "hulu://",
+    "web": "https://www.hulu.com/",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fd/22/5c/fd225ce7-51f8-8df1-8fb6-314568cebb7b/HuluAppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "alternate": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fd/22/5c/fd225ce7-51f8-8df1-8fb6-314568cebb7b/HuluAppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1200x630wa.png",
+    "initial": "H"
+  },
+  {
+    "id": "peacock",
+    "name": "Peacock",
+    "scheme": "peacock://",
+    "web": "https://www.peacocktv.com/",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/14/2d/89/142d899c-be71-32ed-6e09-9e72e731a1ce/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/512x512bb.jpg",
+    "alternate": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/14/2d/89/142d899c-be71-32ed-6e09-9e72e731a1ce/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/1200x630wa.png",
+    "initial": "P"
+  },
+  {
+    "id": "prime",
+    "name": "Prime Video",
+    "scheme": "aiv://",
+    "web": "https://www.primevideo.com/",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ab/10/76/ab1076f9-fba2-093a-7d94-3d23cb8d6b6c/Placeholder.mill/512x512bb.jpg",
+    "alternate": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ab/10/76/ab1076f9-fba2-093a-7d94-3d23cb8d6b6c/Placeholder.mill/1200x630wa.jpg",
+    "initial": "PV"
+  },
+  {
+    "id": "disney",
+    "name": "Disney+",
+    "scheme": "disneyplus://",
+    "web": "https://www.disneyplus.com/",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e0/2b/e3/e02be332-d27f-0f77-36e2-2437c44148b2/AppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg",
+    "alternate": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e0/2b/e3/e02be332-d27f-0f77-36e2-2437c44148b2/AppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/1200x630wa.png",
+    "initial": "D+"
+  },
+  {
+    "id": "music",
+    "name": "Apple Music",
+    "scheme": "music://",
+    "web": "https://music.apple.com/",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4f/e5/16/4fe516ac-9e72-6cbe-f302-3ccc6360fc86/Placeholder.mill/512x512bb.jpg",
+    "alternate": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4f/e5/16/4fe516ac-9e72-6cbe-f302-3ccc6360fc86/Placeholder.mill/1200x630wa.jpg",
+    "initial": "♫"
+  }
 ];
+function appArtwork(a){return `<span class="app-icon app-${a.id} official-icon"><span class="icon-fallback" aria-hidden="true">${a.initial}</span><img src="${a.art}" data-alternate="${a.alternate}" alt="" draggable="false" decoding="async" referrerpolicy="no-referrer"></span>`}
+document.addEventListener('load',e=>{if(e.target instanceof HTMLImageElement&&e.target.matches('.official-icon img'))e.target.classList.add('art-ready')},true);
+// Capture errors even for images inserted after navigation. Keep a neutral monogram if unavailable.
+document.addEventListener('error',e=>{const im=e.target;if(!(im instanceof HTMLImageElement)||!im.matches('.official-icon img'))return;if(im.dataset.alternate&&im.src!==im.dataset.alternate){im.src=im.dataset.alternate;im.classList.add('alternate-art');delete im.dataset.alternate;return}im.hidden=true},true);
+
 const appleMobile=/iPad|iPhone|iPod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
-function dockMarkup(){return dockApps.map(a=>`<a class="dock-app" href="${appleMobile?a.scheme:a.web}" ${appleMobile?'':'target="_blank" rel="noopener noreferrer"'} aria-label="Open ${a.name}" title="Open ${a.name}"><span class="app-icon app-${a.id}">${a.art}</span><span class="dock-label">${a.name}</span></a>`).join('')}
-function streamingLinks(){return `<section class="glass section"><h2>Streaming applications</h2><div class="stream-list">${dockApps.map(a=>`<div class="stream-row"><span class="app-icon app-${a.id}">${a.art}</span><strong>${a.name}</strong><a class="secondary" href="${appleMobile?a.scheme:a.web}" ${appleMobile?'':'target="_blank" rel="noopener noreferrer"'}>Open</a><a class="textbutton" href="${a.web}" target="_blank" rel="noopener noreferrer">Website ↗</a></div>`).join('')}</div><p class="note">On iPhone or iPad, Open attempts to launch the installed app. If iOS declines or the app is missing, use Website. On computers, the links open the service website. Playback and subscriptions are managed by each service.</p></section>`}
+function dockMarkup(){return dockApps.map(a=>`<a class="dock-app" href="${appleMobile?a.scheme:a.web}" ${appleMobile?'':'target="_blank" rel="noopener noreferrer"'} aria-label="Open ${a.name}" title="Open ${a.name}">${appArtwork(a)}</a>`).join('')}
+function streamingLinks(){return `<section class="glass section"><h2>Streaming applications</h2><div class="stream-list">${dockApps.map(a=>`<div class="stream-row">${appArtwork(a)}<strong>${a.name}</strong><a class="secondary" href="${appleMobile?a.scheme:a.web}" ${appleMobile?'':'target="_blank" rel="noopener noreferrer"'}>Open</a><a class="textbutton" href="${a.web}" target="_blank" rel="noopener noreferrer">Website ↗</a></div>`).join('')}</div><p class="note">On iPhone or iPad, Open attempts to launch the installed app. If iOS declines or the app is missing, use Website. On computers, the links open the service website. Playback and subscriptions are managed by each service.</p></section>`}
 $('#appDock').innerHTML=dockMarkup();
 render();renderAdaptive(true);refreshWeatherUI();fetchWeather();runSync();
 
