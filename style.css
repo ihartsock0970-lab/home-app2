@@ -70,3 +70,31 @@ body[data-period=evening]{background-image:radial-gradient(ellipse at 22% 4%,#27
 @media(min-width:951px){body[data-period=daytime] .homegrid{grid-template-areas:'hero agenda tasks' 'home focus goals'}body[data-period=evening] .homegrid{grid-template-areas:'hero agenda tasks' 'home goals focus'}}
 @media(max-width:640px){:root{--dock-reserve:88px}.entertainment-dock{width:calc(100% - 28px);max-width:430px;gap:0;justify-content:space-between;padding:11px 12px;border-radius:26px;bottom:calc(9px + env(safe-area-inset-bottom))}.entertainment-dock .app-icon{width:clamp(35px,11.8vw,53px);height:clamp(35px,11.8vw,53px);border-radius:23%}.dock-app{flex:none}.dock-app::before{height:8px;bottom:-4px;filter:blur(6px)}.official-icon .icon-fallback{font-size:17px}.homegrid>.glass{border-radius:23px}}
 @media(prefers-reduced-motion:reduce){.dock-app{transition:none!important;transform:none!important}}
+
+/* HOME 0.6.3 — clean weather canvas and original compact dock. */
+/* The preceding glass background shorthand resets image sizing and repeat. */
+.homegrid .hero-v5 {
+  background-image: linear-gradient(90deg,#242b4fa0,#34375822 55%,transparent),url('sky.jpg');
+  background-size: 100% 100%, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-origin: border-box;
+  background-clip: padding-box;
+  overflow: hidden;
+}
+.wordmark, .wordmark button {font-weight: 600; text-transform:none;}
+:root {--dock-reserve:102px;}
+.entertainment-dock {gap:clamp(12px,2.6vw,32px);padding:11px 23px;border-radius:30px;}
+.entertainment-dock .app-icon {width:60px;height:60px;border-radius:15px;}
+/* Crop the thin pale rim embedded in some artwork, without redrawing logos. */
+.official-icon {border:0;outline:0;box-shadow:0 4px 12px #0004;overflow:hidden;isolation:isolate;}
+.entertainment-dock .official-icon {border:0;outline:0;box-shadow:0 4px 12px #0005;}
+.official-icon img {border:0;outline:0;border-radius:0;transform:scale(1.12);transform-origin:center;}
+.official-icon img.alternate-art {transform:scale(1.60);}
+.dock-app::before {bottom:-6px;height:10px;opacity:.38;}
+@media(max-width:640px){
+ :root {--dock-reserve:82px;}
+ .entertainment-dock {width:calc(100% - 24px);max-width:430px;gap:clamp(4px,1.5vw,10px);padding:10px 9px;border-radius:25px;justify-content:space-evenly;}
+ .entertainment-dock .app-icon {width:clamp(32px,10.5vw,48px);height:clamp(32px,10.5vw,48px);border-radius:12px;}
+ .dock-app::before {height:7px;bottom:-4px;}
+}
