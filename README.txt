@@ -1,5 +1,2 @@
-Home v0.8.3 — Scenic Dashboard
-Upload all files to your existing GitHub Pages repository. Export a backup first.
-Fixed six-widget layout; previous layout preferences are ignored, not deleted.
-Use the image button in the dashboard header to select a preset. Settings are stored locally per device. Clock faces remain independent.
-Scenic photographs are existing Unsplash URLs, cached after a successful online load; built-in sky fallback if unavailable. No generated photos are included.
+Home v0.8.4 — Compact scenic dashboard
+Replace the existing repository files with the contents of this ZIP. Existing personal data keys, Supabase schema, clock faces, icon and wallpaper preferences are unchanged. The header icon is removed only from the dashboard. The iPad dock is now in normal layout flow, with compact landscape widgets and horizontal goal progress rows. Smaller windows or unusually long content may scroll instead of overlapping. Remote photos still require an initial successful network load.
