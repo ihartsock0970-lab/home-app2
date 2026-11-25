@@ -1,2 +1,4 @@
-Home v0.8.6 — Consistent layout and iPhone redesign
-Upload all files except README.txt to the existing GitHub Pages repository. Existing data keys and synchronization remain unchanged. The iPad dock appears on Home only; iPhone has a five-item navigation bar and no streaming dock. Scenic photographs are cached after successful online loading. Back up data before deployment.
+Home v0.8.7 — Native Experience Update
+Upload the application files to your existing GitHub Pages repository. Existing icon, database schema and storage keys are unchanged. Back up your data before deploying. The iPad dock remains on Home; iPhone has no entertainment dock.
+
+New: feathered mobile scroll edges, frosted and collapsing header, refreshed glass cards/navigation, pull-to-refresh for weather/sync, quick-add (+), Daily overview (inside Quick add), and Settings > Display preservation. Scheduled sleep releases the ambient wake lock; actual screen-off behavior and backlight depend on iPadOS. Display preservation is opt-in. Scenic photographs retain their existing remote URLs and offline caching; the HTML preview embeds the original bundled graphics, but live photos need internet. The standalone preview does not register a service worker or connect to the production storage origin. Use the ZIP for deployment.

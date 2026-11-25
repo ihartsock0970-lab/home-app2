@@ -367,3 +367,37 @@ html.phone-ui .phone-home-summary086{display:flex!important;justify-content:spac
 #more086{position:fixed;inset:auto 0 max(12px,env(safe-area-inset-bottom,0px));margin:0 auto;width:min(420px,calc(100vw - 24px));max-width:none;max-height:80dvh;overflow:auto;border-radius:26px;padding:16px;background:linear-gradient(145deg,#39465a,#252c3c);border:1px solid #ffffff35;box-shadow:0 16px 50px #0007;animation:bgIn083 .25s ease-out}#more086::backdrop{background:#0006;backdrop-filter:blur(4px)}.more-links086{display:grid;gap:3px;margin-top:12px}.more-links086 button{display:flex;align-items:center;gap:12px;width:100%;padding:14px 10px;background:#ffffff0b;border-radius:13px;text-align:left}.more-links086 button span:not(.icon){flex:1}.more-links086 button[aria-current=page]{background:#8ebaff30}.more-links086 button>.icon:last-child{width:17px;height:17px;opacity:.6}
 @media(max-width:360px){html.phone-ui body .shell header .roundtool{width:34px!important;height:34px!important}.phone-ui .homegrid .focusactions{gap:2px!important}}
 @media(prefers-reduced-motion:reduce){#more086{animation:none}}
+
+/* Home 0.8.7 — feathered scroll edges and responsive glass chrome. */
+html{--topfade087:0px;--bottomfade087:0px}
+html.phone-ui body .shell main{position:relative!important;overflow:visible!important}
+html.phone-ui body .shell #view{padding-top:2px;padding-bottom:12px;overscroll-behavior-y:contain;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 var(--topfade087),#000 calc(100% - var(--bottomfade087)),transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 var(--topfade087),#000 calc(100% - var(--bottomfade087)),transparent 100%);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+html.phone-ui body .shell main header{z-index:4!important;isolation:isolate;transition:color .2s;flex-shrink:0!important;gap:5px!important;margin-bottom:4px!important;padding-inline:2px!important}
+html.phone-ui body .shell main header::before{content:'';position:absolute;z-index:-1;inset:-7px -9px -13px;border-radius:17px;background:linear-gradient(180deg,#1a273e70,#1a273e48 68%,transparent);backdrop-filter:blur(16px) saturate(130%);-webkit-backdrop-filter:blur(16px) saturate(130%);-webkit-mask-image:linear-gradient(#000 65%,transparent);mask-image:linear-gradient(#000 65%,transparent);opacity:0;transition:opacity .22s;pointer-events:none}
+html.phone-ui.scrolled087 body .shell main header::before{opacity:1}
+html.phone-ui body .shell .wordmark{transform-origin:left center;transition:transform .22s cubic-bezier(.2,.8,.2,1);white-space:nowrap;min-width:0;overflow:hidden;text-overflow:ellipsis}
+html.phone-ui.scrolled087 body .shell .wordmark{transform:scale(.80)}
+html.phone-ui body .shell header .roundtool{width:34px!important;height:34px!important}
+html.phone-ui body .shell .clockwrap{gap:4px!important;flex-shrink:0}
+html.phone-ui body .shell aside{z-index:5!important}
+html.phone-ui body .shell aside nav{background:linear-gradient(145deg,#41516b80,#17243ba8)!important;border-color:#ffffff3b!important;backdrop-filter:blur(24px) saturate(145%);-webkit-backdrop-filter:blur(24px) saturate(145%)}
+html.phone-ui body .shell aside .navbtn.active{background:#9ebfff26!important;box-shadow:inset 0 1px 0 #ffffff24,inset 0 0 0 1px #a9cdff30}
+html.phone-ui body .shell{padding-bottom:max(8px,env(safe-area-inset-bottom,0px))!important;gap:5px!important}
+html.phone-ui body .shell .homegrid>.glass,html:not(.phone-ui) body.scenic083[data-page=overview] .homegrid>.glass{background:linear-gradient(145deg,#45586c78,#162337ac)!important;border:1px solid #ffffff32!important;box-shadow:inset 0 1px 0 #ffffff18,0 5px 16px #0002!important;backdrop-filter:blur(20px) saturate(125%);-webkit-backdrop-filter:blur(20px) saturate(125%)}
+html.phone-ui body .shell #appDock{display:none!important}
+.pull-label087{display:none;position:absolute;z-index:7;top:48px;left:50%;transform:translateX(-50%);padding:7px 13px;border-radius:18px;font-size:12px;background:#27374de8;box-shadow:0 3px 12px #0004;pointer-events:none;white-space:nowrap}
+.pull-label087.show{display:block}
+#quick087,#daily087{padding:20px;border-radius:27px;background:linear-gradient(145deg,#3c4a60ed,#1b2538f5);border:1px solid #ffffff35;max-height:80dvh;overflow:auto;box-shadow:0 20px 70px #0007}
+#quick087::backdrop,#daily087::backdrop{background:#0005;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+#quick087 h2,#daily087 h2{margin:0}
+.quick-list087{display:grid;gap:5px;margin-top:15px}.quick-list087 button{display:flex;align-items:center;gap:12px;text-align:left;background:#ffffff0b;padding:13px;border-radius:14px;min-height:46px}.quick-list087 button span:not(.icon){flex:1}.quick-list087 button .icon{color:#c2b9ff}.daily-grid087{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:15px 0 20px}.daily-grid087 button{display:grid;gap:6px;text-align:left;background:#ffffff12;padding:15px;border-radius:16px;min-height:84px}.daily-grid087 strong{font-size:25px;font-weight:550}.daily-grid087 span{font-size:12px;color:#e3e1eb}.pres-toggle087{display:flex!important;align-items:center;gap:8px!important;min-height:38px;color:var(--fg)!important}
+@media(max-width:640px){#quick087,#daily087{inset:auto 0 max(10px,env(safe-area-inset-bottom));margin:0 auto;width:calc(100% - 24px);max-width:none}}
+html.preserve087 .face-screen:not(.editing):not(.holding) .face-clock-wrap{transform:translate(var(--shift-x087,0px),var(--shift-y087,0px))}
+html.quiet087 .photo-only:not(.editing) .wallpaper-layer.current{animation:none!important}
+html.quiet087 body.clock-mode .shell *{animation-play-state:paused!important}
+html.dim087 #ambientDisplay:not(.editing) .face-clock-wrap{opacity:.72}
+html.dim087 #ambientDisplay:not(.editing) .wallpaper-layer{filter:brightness(.7)}
+@media(prefers-reduced-motion:reduce){html.phone-ui body .shell main header::before,html.phone-ui body .shell .wordmark{transition:none!important}}
+html.phone-ui{background-color:#1b2739}
+html.phone-ui body.scenic083 #dashBackdrop083{inset:0;min-height:100vh;min-height:100lvh}
+html.dim087 #ambientDisplay:not(.editing) .wallpaper-layer{filter:brightness(calc(var(--wall-brightness,1)*.7))}
