@@ -1,2 +1,2 @@
-Home v0.8.5 — Safe area and iPhone dock fix
-Replace repository files with the contents of this ZIP. iPad reserves additional status-bar space in standalone mode and uses normal document scrolling. Dock stays in normal flow on iPad; no dock links are rendered on iPhone. Existing personal data keys, Supabase schema, wallpaper settings and icon remain unchanged. Remote photos still need an initial network load.
+Home v0.8.6 — Consistent layout and iPhone redesign
+Upload all files except README.txt to the existing GitHub Pages repository. Existing data keys and synchronization remain unchanged. The iPad dock appears on Home only; iPhone has a five-item navigation bar and no streaming dock. Scenic photographs are cached after successful online loading. Back up data before deployment.
