@@ -515,3 +515,30 @@ html.phone-ui #editor.editor-sheet091 .weekdays091{padding:16px 0;}
 #taskMenu092{background:#303849f5;border:1px solid #ffffff28;border-radius:22px;padding:16px;width:min(320px,calc(100vw - 30px));animation:quickIn092 .25s ease both;}#taskMenu092 h2{font-size:18px;margin:0;overflow-wrap:anywhere;}#taskMenu092::backdrop{background:#0004;backdrop-filter:blur(4px)}.danger092{color:#ff9b9b!important}
 html.phone-ui .shell aside .navbtn[data-tab=Today]{display:none!important}
 @media(prefers-reduced-motion:reduce){#quick087,#taskMenu092,[data-task-row092].completing092 input{animation:none!important}[data-task-row092],.quick-btn087 .icon{transition:none!important}}
+
+/* v0.9.3: one tablet viewport, one dock row, continuous root wallpaper. */
+html.tablet-device{min-height:100%;background-color:#182332!important;background-image:radial-gradient(ellipse at 70% 10%,#3e5263,#182332 75%)!important;background-size:cover!important;background-position:var(--photo-x090,50%) var(--photo-y090,50%)!important;background-repeat:no-repeat!important}
+html.tablet-device.photo-ready093{background-image:linear-gradient(#09101d35,#080d1765),var(--root-photo090,none)!important}
+html.tablet-device body{height:100%!important;min-height:0!important;background-color:transparent!important}
+html.tablet-device body.scenic083 #dashBackdrop083{position:fixed!important;inset:0!important;width:100%!important;height:100%!important;min-height:100lvh!important}
+html.tablet-device body .shell{height:var(--tablet-height093,100dvh)!important;min-height:0!important;padding-bottom:max(8px,env(safe-area-inset-bottom,0px))!important;grid-template-rows:minmax(0,1fr)!important}
+html.tablet-device body .shell main{display:grid!important;grid-template-rows:44px minmax(0,1fr) auto;row-gap:10px!important;min-height:0!important;height:100%!important}
+html.tablet-device body .shell main header{margin:0!important}
+html.tablet-device body .shell #view{min-height:0!important;padding-bottom:0!important;overflow-y:auto!important}
+html.tablet-device body[data-page=overview] .shell #appDock:not([hidden]){position:relative!important;grid-row:3;align-self:end!important;justify-self:center!important;margin:0!important;padding:7px 20px!important;transform:none!important;background:linear-gradient(145deg,#929caf55,#384052a8)!important;box-shadow:inset 0 1px 1px #ffffff35,0 7px 25px #0004!important;animation:dockIn093 .4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes dockIn093{from{opacity:0;translate:0 8px}to{opacity:1;translate:0 0}}
+html.tablet-device body[data-page=overview] .shell .homegrid{grid-template-rows:minmax(110px,.86fr) minmax(210px,1.38fr) minmax(118px,.7fr)!important;gap:11px!important;min-height:100%!important}
+html.tablet-device body[data-page=overview] .shell .homegrid>.glass{padding:14px 16px!important;min-height:0!important}
+html.tablet-device body[data-page=overview] .shell .homegrid .dash-home .roomcards{margin-top:7px;gap:5px}
+html.tablet-device body[data-page=overview] .shell .homegrid .dash-home .roomcard{min-height:38px!important;padding:5px 7px!important}
+html.tablet-device body[data-page=overview] .shell .homegrid .dash-home .scene{min-height:29px!important;padding:3px!important}
+html.tablet-device body .shell header .clockwrap{display:flex;align-items:center;gap:4px!important;padding:4px;border-radius:28px;background:#15233338;border:1px solid #ffffff18;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+html.tablet-device body .shell header .roundtool{display:grid;place-items:center;padding:0!important;border:0!important;background:transparent!important}
+html.tablet-device body .shell header .quick-btn087{background:#c3b8ff30!important;color:#e6e0ff}
+html.tablet-device body .shell header .roundtool>svg,html.tablet-device body .shell header .roundtool>.icon{width:22px!important;height:22px!important;margin:0!important}
+html.tablet-device #dashBackdrop083:after{background:linear-gradient(180deg,rgba(8,14,25,var(--shade093,.24)),rgba(8,14,25,calc(var(--shade093,.24) + .14)) 65%,rgba(8,14,25,calc(var(--shade093,.24) + .25)))}
+html.tablet-device .dash-dim083 #dashBackdrop083:after{background:rgba(8,14,25,max(.48,var(--shade093,.24)))}
+.empty093{display:flex;align-items:center;gap:11px;padding:10px 0;color:var(--muted);min-width:0}.empty093>.icon{width:30px;height:30px;color:#c3b8ff;opacity:.8}.empty093 strong{display:block;color:var(--fg);font-weight:550;font-size:13px}.empty093 small{display:block;font-size:11px;margin-top:4px;line-height:1.3}
+.goal-summary093{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:10px;min-width:0}.goal-tile093{background:#ffffff0c;border:1px solid #ffffff14;border-radius:12px;padding:8px 10px;display:grid;gap:6px;text-align:left;min-width:0}.goal-name093{display:flex;align-items:center;justify-content:space-between;gap:6px;overflow-wrap:anywhere;font-size:13px}.goal-name093 strong{font-size:12px;color:#d8d0ff;white-space:nowrap}.goal-tile093 small{font-size:10px;color:var(--muted)}.goal-tile093 .goaltrack{width:100%;height:6px}.goal-tile093 .goaltrack span{display:block;height:100%}
+html.phone-ui .goal-summary093{grid-template-columns:1fr;gap:6px}html.phone-ui .empty093>.icon{display:none}
+@media(prefers-reduced-motion:reduce){html.tablet-device body[data-page=overview] .shell #appDock:not([hidden]){animation:none!important}}

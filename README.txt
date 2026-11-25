@@ -1,2 +1,2 @@
-Home v0.9.2 (build 092)
-Upload the contents of this ZIP to the existing GitHub Pages repository. Export a backup first and update both devices. No schema changes. Existing storage keys and app icons retained. Today is available via sidebar, More, or Quick add. Swipe a task right to toggle completion; left or long-press to show actions. Syntax checked; browser navigation blocked, so device testing required.
+Home v0.9.3 / Build 093
+Upload application files to your existing GitHub Pages repository. Export a backup first. Existing storage and Supabase schema are unchanged. Tablet viewport and root background changes require installed iPadOS testing.
