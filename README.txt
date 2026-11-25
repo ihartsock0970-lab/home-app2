@@ -1,2 +1,2 @@
-Home v0.8.4 — Compact scenic dashboard
-Replace the existing repository files with the contents of this ZIP. Existing personal data keys, Supabase schema, clock faces, icon and wallpaper preferences are unchanged. The header icon is removed only from the dashboard. The iPad dock is now in normal layout flow, with compact landscape widgets and horizontal goal progress rows. Smaller windows or unusually long content may scroll instead of overlapping. Remote photos still require an initial successful network load.
+Home v0.8.5 — Safe area and iPhone dock fix
+Replace repository files with the contents of this ZIP. iPad reserves additional status-bar space in standalone mode and uses normal document scrolling. Dock stays in normal flow on iPad; no dock links are rendered on iPhone. Existing personal data keys, Supabase schema, wallpaper settings and icon remain unchanged. Remote photos still need an initial network load.

@@ -292,3 +292,23 @@ html:not(.phone-ui) body[data-page=overview] .dash-agenda .agenda-item:nth-of-ty
 html.tablet-dock body[data-page=overview]:not(.clock-mode) #appDock:not([hidden]) .app-icon{width:clamp(44px,7.2dvh,60px);height:clamp(44px,7.2dvh,60px)}
 }
 @media(min-width:800px) and (orientation:landscape) and (min-height:700px){html:not(.phone-ui) body[data-page=overview] .shell main{display:flex;flex-direction:column}html:not(.phone-ui) body[data-page=overview] #view{flex:1;display:flex;flex-direction:column}html:not(.phone-ui) body[data-page=overview] .homegrid{flex:1;grid-template-rows:minmax(120px,.9fr) minmax(205px,1.45fr) minmax(95px,.9fr)}}
+
+/* 0.8.5 — keep navigation below the iPadOS status-bar region and use one page scroller. */
+html.tablet-device{--home-safe-top:env(safe-area-inset-top,0px);height:auto;min-height:100%;overflow-x:clip;overflow-y:auto;scroll-padding-top:var(--home-safe-top)}
+html.tablet-device.installed-ui{--home-safe-top:max(44px,calc(env(safe-area-inset-top,0px) + 16px))}
+html.tablet-device body{height:auto;min-height:100vh;min-height:100dvh;overflow:visible}
+html.tablet-device body:not(.clock-mode) .shell{height:auto;min-height:0;overflow:visible;margin-block:0;align-items:start}
+html.tablet-device body:not(.clock-mode) .shell main{height:auto;min-height:0;overflow:visible;padding-top:calc(var(--home-safe-top) + 12px);padding-bottom:8px}
+html.tablet-device body:not(.clock-mode) .shell aside{position:sticky;top:var(--home-safe-top);height:auto;min-height:0;max-height:none;padding-top:12px;overflow:visible}
+html.tablet-device body:not(.clock-mode) .shell main header{position:relative;inset:auto;overflow:visible;margin-top:0;min-height:40px}
+html.tablet-device body:not(.clock-mode) #view{min-height:0;overflow:visible}
+html.tablet-device body[data-page=overview]:not(.clock-mode) .homegrid{grid-template-rows:auto auto auto;align-items:stretch;flex:0 0 auto}
+html.tablet-device body[data-page=overview]:not(.clock-mode) .homegrid .dash-goals{min-height:80px;align-content:start}
+html.tablet-device body:not(.clock-mode) #appDock:not([hidden]){margin-top:12px;flex-shrink:0}
+/* The phone never creates streaming dock links; this is an independent CSS safeguard. */
+html.phone-ui #appDock,html:not(.tablet-device) #appDock,#appDock[hidden]{display:none!important;visibility:hidden!important;pointer-events:none!important}
+html.phone-ui{--dock-reserve:0px}
+html.phone-ui body .shell{padding-top:env(safe-area-inset-top,0px)}
+html.phone-ui.installed-ui body .shell{padding-top:max(24px,env(safe-area-inset-top,0px))}
+html.phone-ui body .shell main{padding-bottom:24px;scroll-padding-top:72px}
+html.phone-ui body .shell main header{padding-top:12px}
