@@ -440,3 +440,49 @@ html.phone-ui body .shell .homegrid>.glass,html:not(.phone-ui) body.scenic083[da
 .habit090{padding:13px 0;border-bottom:1px solid var(--line)}.habit090:last-child{border-bottom:0}.habitweek090{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;margin-top:12px}.habitweek090>div{display:grid;justify-items:center;gap:5px;color:var(--muted)}.habitweek090 span{width:28px;height:28px;display:grid;place-items:center;border-radius:50%;background:#ffffff12}.habitweek090 .hit090{background:#83bda342;color:#bdf5d6}.insights-grid090{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.bars090{display:flex;align-items:stretch;gap:10px;height:180px;margin:18px 0 6px}.bars090>div{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:5px}.bars090 span{background:linear-gradient(#b6a1ff,#7054c8);border-radius:7px 7px 3px 3px;width:min(75%,36px);max-height:125px}.bars090 small{font-size:11px;color:var(--muted)}
 html.phone-ui .shell aside .navbtn[data-tab=Habits],html.phone-ui .shell aside .navbtn[data-tab=Insights]{display:none!important}
 @media(max-width:640px){.insights-grid090 .glass{padding:14px}.insights-grid090 .big{font-size:25px}.habitweek090{gap:2px}}
+/* 0.9.1 — compact shared editor and native-style refresh */
+#editor.editor-sheet091{padding:0!important;width:min(540px,calc(100vw - 36px));max-width:none;max-height:min(86vh,720px);overflow:hidden;background:linear-gradient(145deg,#303747f5,#202634fa);border:1px solid #ffffff26;box-shadow:0 24px 80px #0008;border-radius:26px;transform:translateY(var(--sheet-drag091,0px));}
+#editor.editor-sheet091[open]{display:flex;flex-direction:column;animation:editorIn091 .32s cubic-bezier(.18,.84,.28,1.12) both}
+#editor.editor-sheet091.closing091{animation:editorOut091 .22s ease-in both;pointer-events:none}
+#editor.editor-sheet091::backdrop{background:#0007;backdrop-filter:blur(8px);animation:fade091 .22s ease both}
+#editor.editor-sheet091 .editor-top091{flex:none;padding:14px 18px 12px;border-bottom:1px solid #ffffff12;touch-action:none}
+#editor.editor-sheet091 .editor-bar091{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;min-height:36px}
+#editor.editor-sheet091 .editor-bar091 h2{margin:0;font-size:17px;letter-spacing:-.025em;text-transform:none;text-align:center}
+#editor.editor-sheet091 .editor-bar091 button{background:none;color:#c1b4ff;font-weight:600;padding:9px 0;text-align:left;font-size:15px;min-height:40px}
+#editor.editor-sheet091 .editor-bar091 button:last-child{text-align:right}
+#editor.editor-sheet091 form{display:flex!important;flex-direction:column;min-height:0;overflow:hidden;margin:0!important;gap:0}
+#editor.editor-sheet091 .editor-body091{padding:18px;display:grid;gap:10px;overflow:auto;overscroll-behavior:contain;min-height:0;-webkit-overflow-scrolling:touch;scroll-padding:16px}
+#editor.editor-sheet091 .editor-body091 label{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--fg);font-size:15px;min-width:0;min-height:48px;background:#ffffff0a;border:1px solid #ffffff0c;border-radius:12px;padding:8px 12px}
+#editor.editor-sheet091 .editor-body091 label[hidden],#editor.editor-sheet091 [hidden]{display:none!important}
+#editor.editor-sheet091 .editor-body091 input:not([type=checkbox]),#editor.editor-sheet091 .editor-body091 select,#editor.editor-sheet091 textarea{min-width:0;max-width:100%;width:55%;margin:0;border:0;background:#0002;border-radius:8px;padding:8px;font-size:16px;min-height:36px;color:var(--fg);box-sizing:border-box}
+#editor.editor-sheet091 .editor-body091 input[type=date],#editor.editor-sheet091 .editor-body091 input[type=time]{appearance:none;-webkit-appearance:none;min-width:0;max-width:65%;text-align:right}
+#editor.editor-sheet091 .editor-body091 label:has([name=title]),#editor.editor-sheet091 .editor-body091 label:has(textarea){display:grid;gap:8px}
+#editor.editor-sheet091 .editor-body091 [name=title],#editor.editor-sheet091 .editor-body091 textarea{width:100%;text-align:left}
+#editor.editor-sheet091 textarea{min-height:72px}
+#editor.editor-sheet091 .repeat-details091{display:grid;gap:10px;min-width:0}
+#editor.editor-sheet091 .weekdays091{padding:10px 0;min-width:0}
+#editor.editor-sheet091 .weekday-buttons091{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;margin-top:8px}
+#editor.editor-sheet091 .weekday-buttons091 label{position:relative;padding:0;display:grid;place-items:center;border-radius:12px;min-height:42px;cursor:pointer}
+#editor.editor-sheet091 .weekday-buttons091 input{position:absolute;opacity:0;width:100%;height:100%;margin:0}
+#editor.editor-sheet091 .weekday-buttons091 label:has(input:checked){background:#8268d9;color:white}
+#editor.editor-sheet091 .weekday-buttons091 label:has(input:focus-visible){outline:2px solid white}
+#editor.editor-sheet091 .weekday-buttons091 span{font-size:12px;pointer-events:none}
+#editor.editor-sheet091 .delete091{color:#ff999b;background:#ff596b12;justify-self:stretch;margin-top:5px}
+.sheet-grab091{display:none}.overdue091{color:#ffb4a8;margin:12px 0 8px}
+@keyframes editorIn091{from{opacity:0;scale:.96}to{opacity:1;scale:1}}
+@keyframes editorOut091{to{opacity:0;scale:.96}}
+@keyframes fade091{from{opacity:0}to{opacity:1}}
+@keyframes sheetIn091{from{translate:0 100%;opacity:.6}to{translate:0 0;opacity:1}}
+@keyframes sheetOut091{to{translate:0 100%;opacity:.5}}
+html.phone-ui #editor.editor-sheet091{position:fixed!important;inset:auto 0 var(--editor-bottom091,0px) 0!important;margin:0 auto!important;width:100%!important;max-width:100%!important;max-height:min(88dvh,calc(var(--editor-vh091,100dvh) - 28px))!important;border-radius:27px 27px 0 0!important;padding-bottom:env(safe-area-inset-bottom,0px)!important;box-sizing:border-box!important}
+html.phone-ui #editor.editor-sheet091[open]{animation:sheetIn091 .36s cubic-bezier(.2,.85,.25,1) both}
+html.phone-ui #editor.editor-sheet091.closing091{animation:sheetOut091 .22s ease-in both}
+html.phone-ui #editor.editor-sheet091 .sheet-grab091{display:block;width:34px;height:4px;border-radius:4px;background:#ffffff50;margin:0 auto 8px}
+html.phone-ui #editor.editor-sheet091 .editor-top091{padding:9px 16px 8px}
+html.phone-ui #editor.editor-sheet091 .editor-body091{padding:12px 14px 18px}
+html.phone-ui #editor.editor-sheet091 .editor-body091 label{font-size:14px}
+html.phone-ui #editor.editor-sheet091 .editor-body091 input[type=date]{width:57%}
+#view{--pull091:0px}html.phone-ui #view{transform:translateY(var(--pull091));transition:transform .28s cubic-bezier(.2,.8,.2,1)}html.phone-ui #view.pulling091{transition:none}
+.pull-label087.show{display:flex;align-items:center;gap:8px;z-index:9;top:calc(env(safe-area-inset-top,0px) + 54px);background:#202d40ed;color:#fff;min-height:32px}
+.spinner091{width:19px;height:19px;border:2px dotted #d5dbe8;border-radius:50%;transform:rotate(calc(var(--progress091,0)*270deg));opacity:var(--progress091,0)}.busy091 .spinner091{opacity:1;animation:spin091 .75s linear infinite}@keyframes spin091{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){#editor.editor-sheet091[open],#editor.editor-sheet091.closing091,html.phone-ui #editor.editor-sheet091[open],html.phone-ui #editor.editor-sheet091.closing091{animation:none!important}html.phone-ui #view{transition:none!important}}

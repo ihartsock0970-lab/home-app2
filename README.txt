@@ -1,2 +1,4 @@
-Home 0.9.0 / build 090
-Replace all previous app files in the same GitHub Pages repository. Back up in Settings first. Existing home-plan-v3 records, storage keys, app icons, authentication and database schema retained. Habits are task payloads flagged habit:true; use 0.9 on both devices. Recurrences are daily/weekly/monthly; edit/delete affects the whole event series. Monthly recurrence skips months without that date. Recurring tasks are shown on scheduled days. Routines run only while app is visible at scheduled minute. No physical device control. Settings includes wallpaper position, favorites, opacity and diagnostics. iOS viewport changes require real-device verification. Remote photographs need internet initially.
+Home v0.9.1 / Build 091
+Upload all files to the existing GitHub Pages repository. Export a backup first and update both devices together.
+Recurring weekday schedules use Sunday-based weeks; monthly/yearly recurrence skips dates not present in a month/year. Individual edits create a standalone record and exclude the original occurrence. Overdue section shows unfinished dated nonrecurring tasks; recurring tasks still display the current occurrence. Existing Supabase schema and local keys unchanged.
+Preview is separate from the production origin; do not use it as your live data store.
