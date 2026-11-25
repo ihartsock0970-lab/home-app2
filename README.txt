@@ -1,0 +1,2 @@
+Home v0.8
+Upload the application files to the existing repository root. Back up your data first. Photos use remote Unsplash URLs, cached after loading through the service worker; not bundled. Foreground masks not included. Sources: unsplash.com/photos/Tf28MZJLUkQ, xPmdw_RliUA, 4t6yyhN_NeE, clmO5JdcrY4, iFTqbA-TGhs, fs71HnCbFkA. License: https://unsplash.com/license. Existing storage keys retained.
