@@ -1,2 +1,4 @@
-Home v0.8
-Upload the application files to the existing repository root. Back up your data first. Photos use remote Unsplash URLs, cached after loading through the service worker; not bundled. Foreground masks not included. Sources: unsplash.com/photos/Tf28MZJLUkQ, xPmdw_RliUA, 4t6yyhN_NeE, clmO5JdcrY4, iFTqbA-TGhs, fs71HnCbFkA. License: https://unsplash.com/license. Existing storage keys retained.
+Home v0.8.1
+Upload all files in this ZIP to the existing GitHub Pages repository root. Keep the same origin for data. Back up first.
+Control Center: header button or upper-right downward gesture. Clock: tap, swipe up to dismiss, swipe sideways to change face, hold to customize. Nightstand settings are local.
+Remote scenic photos require network on first load; successfully fetched photos are cached. Real foreground cutouts are not included; optional depth shading is a typography effect only. Physical lights remain simulated.
