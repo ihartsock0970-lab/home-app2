@@ -401,3 +401,30 @@ html.dim087 #ambientDisplay:not(.editing) .wallpaper-layer{filter:brightness(.7)
 html.phone-ui{background-color:#1b2739}
 html.phone-ui body.scenic083 #dashBackdrop083{inset:0;min-height:100vh;min-height:100lvh}
 html.dim087 #ambientDisplay:not(.editing) .wallpaper-layer{filter:brightness(calc(var(--wall-brightness,1)*.7))}
+
+/* Home 0.8.8 — stable mobile viewport and restrained navigation chrome. */
+html.phone-ui {background:#111824;}
+html.phone-ui body {position:fixed!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important;background-attachment:scroll;}
+html.phone-ui body.scenic083 #dashBackdrop083 {position:fixed!important;inset:0!important;width:100%!important;height:100lvh!important;min-height:100%!important;}
+html.phone-ui body .shell {height:100%!important;min-height:0!important;gap:8px!important;padding-top:calc(env(safe-area-inset-top,0px) + 5px)!important;padding-bottom:calc(env(safe-area-inset-bottom,0px) + 6px)!important;}
+html.phone-ui body .shell main {overflow:hidden!important;}
+html.phone-ui body .shell main header {height:44px!important;min-height:44px!important;flex:0 0 44px!important;align-items:center!important;justify-content:space-between!important;gap:6px!important;padding:0 2px!important;margin:0 0 8px!important;isolation:auto;}
+html.phone-ui body .shell main header::before {content:none!important;display:none!important;}
+html.phone-ui body .shell .wordmark {font-size:28px!important;transform:none!important;transition:font-size .18s ease;line-height:1.15!important;}
+html.phone-ui.scrolled087 body .shell .wordmark {font-size:23px!important;transform:none!important;}
+html.phone-ui body .shell .wordmark button {min-height:44px;line-height:1.15;}
+html.phone-ui body .shell .clockwrap {display:flex!important;align-items:center!important;justify-content:flex-end;gap:5px!important;flex-shrink:0;}
+html.phone-ui body .shell header .roundtool {display:flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;width:36px!important;height:36px!important;min-width:36px!important;min-height:36px!important;padding:0!important;margin:0!important;line-height:1!important;border-radius:50%!important;background:#15243960!important;border:1px solid #ffffff27!important;}
+html.phone-ui body .shell header .roundtool > .icon,html.phone-ui body .shell header .roundtool > svg {display:block!important;width:19px!important;height:19px!important;flex:none!important;margin:0!important;padding:0!important;}
+html.phone-ui body .shell header .roundtool .icon svg {display:block!important;width:100%!important;height:100%!important;}
+html.phone-ui body .shell header #settingsButton,html.phone-ui body:not([data-page=overview]) .shell header .bg-button083 {display:none!important;}
+html.phone-ui body .shell #view {padding-top:0!important;padding-bottom:8px!important;mask-image:none!important;-webkit-mask-image:none!important;}
+html.phone-ui.scrolled087 body .shell #view {mask-image:linear-gradient(to bottom,transparent,#000 9px,#000)!important;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 9px,#000)!important;}
+html.phone-ui.more-below087 body .shell #view {mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - 9px),transparent)!important;-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - 9px),transparent)!important;}
+html.phone-ui.scrolled087.more-below087 body .shell #view {mask-image:linear-gradient(to bottom,transparent,#000 9px,#000 calc(100% - 9px),transparent)!important;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 9px,#000 calc(100% - 9px),transparent)!important;}
+html.phone-ui body .shell aside {flex-shrink:0!important;}
+html.phone-ui body .shell aside nav {background:linear-gradient(145deg,#26374bb8,#101a2bd9)!important;}
+html.phone-ui body .shell #appDock {display:none!important;}
+.version088{margin:24px 0 8px;text-align:center;font-size:12px;color:var(--muted);line-height:1.6}.version088 strong{font-size:14px;color:var(--fg);font-weight:600}.version088 small{display:block;font-size:11px;opacity:.8}
+@media(max-width:350px){html.phone-ui body .shell header .roundtool{width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important}html.phone-ui body .shell .clockwrap{gap:3px!important}html.phone-ui body .shell .wordmark{font-size:24px!important}}
+@media(prefers-reduced-motion:reduce){html.phone-ui body .shell .wordmark{transition:none!important}}

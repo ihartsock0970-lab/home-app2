@@ -1,4 +1,4 @@
-Home v0.8.7 — Native Experience Update
-Upload the application files to your existing GitHub Pages repository. Existing icon, database schema and storage keys are unchanged. Back up your data before deploying. The iPad dock remains on Home; iPhone has no entertainment dock.
-
-New: feathered mobile scroll edges, frosted and collapsing header, refreshed glass cards/navigation, pull-to-refresh for weather/sync, quick-add (+), Daily overview (inside Quick add), and Settings > Display preservation. Scheduled sleep releases the ambient wake lock; actual screen-off behavior and backlight depend on iPadOS. Display preservation is opt-in. Scenic photographs retain their existing remote URLs and offline caching; the HTML preview embeds the original bundled graphics, but live photos need internet. The standalone preview does not register a service worker or connect to the production storage origin. Use the ZIP for deployment.
+Home v0.8.8 — iPhone Polish
+Upload the files in this ZIP to the existing GitHub Pages repository. Existing local storage and Supabase configuration are unchanged.
+Mobile header: centered vector icons, no overlaid frosted glow, subtle scroll-edge fades, compact title. Full viewport wallpaper and safe-area-aware navigation. Version 0.8.8 appears at the bottom of Settings.
+The iPad layout and entertainment dock are unchanged. Actual iOS standalone Safari rendering must be verified on-device.
