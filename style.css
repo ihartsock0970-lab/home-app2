@@ -98,3 +98,87 @@ body[data-period=evening]{background-image:radial-gradient(ellipse at 22% 4%,#27
  .entertainment-dock .app-icon {width:clamp(32px,10.5vw,48px);height:clamp(32px,10.5vw,48px);border-radius:12px;}
  .dock-app::before {height:7px;bottom:-4px;}
 }
+
+/* HOME 0.6.4 — dedicated phone UI. iPad keeps its existing layout and dock. */
+html.phone-ui {--dock-reserve:0px;height:100%;overflow:hidden;}
+.phone-ui body {height:100vh;height:100dvh;min-height:0;overflow:hidden;overscroll-behavior:none;}
+.phone-ui .entertainment-dock {display:none!important;}
+.phone-ui body .shell {display:flex;flex-direction:column;position:relative;height:100vh;height:100dvh;min-height:0;width:100%;max-width:none;margin:0;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px);overflow:hidden;}
+.phone-ui body .shell aside {display:none;}
+.phone-ui body .shell main {order:0;width:100%;max-width:none;min-width:0;min-height:0;flex:1;padding:0 16px 24px;overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
+.phone-ui .shell main::-webkit-scrollbar {display:none;}
+.phone-ui body .shell main header {position:sticky;top:0;left:auto;right:auto;bottom:auto;z-index:5;min-height:60px;margin:0 -16px 12px;padding:10px 16px;gap:8px;background:linear-gradient(115deg,#222e54f2,#17182cf2 68%);border-bottom:1px solid #ffffff0c;backdrop-filter:blur(24px) saturate(140%);-webkit-backdrop-filter:blur(24px) saturate(140%);}
+.phone-ui .wordmark {font-size:29px;letter-spacing:-.045em;min-width:0;}
+.phone-ui .wordmark button {display:flex;align-items:center;gap:9px;min-height:44px;}
+.phone-ui body:not([data-page=overview]) .wordmark {font-size:24px;}
+.phone-ui body:not([data-page=overview]) .wordmark button::before {content:'';width:10px;height:10px;border:solid #c5b5ff;border-width:0 0 2px 2px;transform:rotate(45deg);margin-left:3px;flex:none;}
+.phone-ui .clockwrap {gap:7px;flex:none;}
+.phone-ui .roundtool {width:42px;height:42px;padding:10px;}
+.phone-ui body .homegrid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:'hero hero' 'agenda agenda' 'tasks tasks' 'focus goals' 'home home';gap:12px;align-items:stretch;}
+.phone-ui .homegrid>.glass {min-height:0;min-width:0;padding:15px;border-radius:22px;box-shadow:inset 0 1px 1px #ffffff13,0 6px 18px #03051426;border-color:#c9c6f034;}
+.phone-ui .homegrid .hero-v5 {min-height:188px;padding:19px;gap:3px;border-color:#acbaf175;}
+.phone-ui .hero-date {font-size:16px;}
+.phone-ui .hero-clock {font-size:clamp(57px,16vw,78px);line-height:.99;margin:3px 0 8px;}
+.phone-ui .hero-weather {gap:9px;}
+.phone-ui .hero-weather strong {font-size:27px;}
+.phone-ui .hero-weather small {font-size:12px;line-height:1.35;}
+.phone-ui .wxemoji {font-size:31px;}
+.phone-ui .cardhead {min-height:34px;gap:8px;margin-bottom:7px;}
+.phone-ui .cardhead h2 {font-size:17px;font-weight:600;line-height:1.2;min-width:0;}
+.phone-ui .cardhead>.icon {width:22px;height:22px;}
+.phone-ui .calendar-icon {width:27px;height:30px;border-radius:7px;}
+.phone-ui .calendar-icon small {font-size:8px;}
+.phone-ui .calendar-icon b {font-size:18px;}
+.phone-ui .circle-action {width:34px;height:34px;flex:none;}
+.phone-ui .homegrid .empty {padding:5px 0 7px;font-size:13px;line-height:1.45;}
+.phone-ui .homegrid .textbutton {font-size:13px;min-height:38px;margin-top:0;padding:5px 0;}
+.phone-ui .agenda-item {gap:8px;min-height:40px;padding:3px 0;}
+.phone-ui .agenda-item time {width:68px;font-size:12px;flex:none;}
+.phone-ui .agenda-item>span {font-size:14px;line-height:1.25;min-width:0;overflow-wrap:anywhere;}
+.phone-ui .taskrow {min-height:42px;gap:10px;font-size:14px;}
+.phone-ui .taskrow input[type=checkbox] {width:21px;height:21px;}
+.phone-ui .homegrid .dash-focus,.phone-ui .homegrid .dash-goals {padding:12px;min-height:0;}
+.phone-ui .dash-focus .cardhead,.phone-ui .dash-goals .cardhead {gap:6px;}
+.phone-ui .dash-focus .cardhead>.icon,.phone-ui .dash-goals .cardhead>.icon {width:20px;height:20px;}
+.phone-ui .dash-focus .circle-action,.phone-ui .dash-goals .circle-action {width:30px;height:30px;}
+.phone-ui .dash-focus .focus-ring {width:clamp(104px,32vw,140px);max-width:100%;height:auto;aspect-ratio:1/1;padding:7px;margin:8px auto 11px;}
+.phone-ui .dash-focus .focusface {font-size:clamp(23px,7vw,32px);line-height:1.15;margin:0;}
+.phone-ui .dash-focus .focus-inner .muted {font-size:11px;max-width:90%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.phone-ui .dash-focus .focusactions {gap:5px;margin:0;}
+.phone-ui .dash-focus .focusactions .circle-action {width:34px;height:36px;}
+.phone-ui .dash-focus .play-action {min-width:44px;height:36px;padding:0 9px;}
+.phone-ui .dash-goals .goalrow {padding:6px 0;}
+.phone-ui .dash-goals .goalrow .between {font-size:13px;overflow-wrap:anywhere;}
+.phone-ui .dash-goals .goalmetric {gap:5px;flex-wrap:wrap;}
+.phone-ui .dash-goals .goaltrack {flex:1 0 100%;}
+.phone-ui .dash-goals .goalmetric small {font-size:11px;}
+.phone-ui .homegrid .dash-home .roomcards {grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px;}
+.phone-ui .homegrid .dash-home .roomcard {min-height:55px;padding:8px;gap:7px;border-radius:13px;}
+.phone-ui .homegrid .dash-home .roomcard strong {font-size:13px;}
+.phone-ui .homegrid .dash-home .roomcard small {font-size:11px;}
+.phone-ui .homegrid .dash-home .scenes {grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;}
+.phone-ui .homegrid .dash-home .scene {font-size:12px;min-height:44px;padding:8px 3px;}
+.phone-ui .homegrid .dash-home .section {margin-top:10px;}
+.phone-ui #toast {bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:calc(100% - 32px);}
+.phone-ui dialog {max-height:calc(100dvh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px) - 24px);max-width:calc(100vw - 28px);overflow:auto;}
+/* Narrow phones stack the pair, wide/landscape phones gain an extra column. */
+@media(max-width:355px){.phone-ui body .homegrid{grid-template-columns:minmax(0,1fr);grid-template-areas:'hero' 'agenda' 'tasks' 'focus' 'goals' 'home';}.phone-ui .homegrid .dash-focus,.phone-ui .homegrid .dash-goals{padding:15px;}.phone-ui .dash-focus .focus-ring{width:140px;}.phone-ui .dash-focus .focusface{font-size:32px;}}
+@media(min-width:650px){.phone-ui body .homegrid{grid-template-areas:'hero agenda' 'tasks home' 'focus goals';}.phone-ui .homegrid .hero-v5{min-height:196px;}.phone-ui .hero-clock{font-size:72px;}}
+
+/* v0.7 clock faces */
+#appDock[hidden],body.clock-mode #appDock,body.clock-mode .shell{display:none!important}
+@media(max-width:600px){#appDock{display:none!important}}
+.face-screen{inset:0;width:100%;height:100%;height:100dvh;min-height:0;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none;background-size:cover!important;background-position:center!important;color:white;padding:0;isolation:isolate}
+.face-screen::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#09142610,#07112010 45%,#07101c55)}
+.face-sky{background:linear-gradient(0deg,#11182d36,#172b5722),url('sky.jpg') center/cover no-repeat!important}
+.face-dunes{background:url('dunes.svg') center/cover no-repeat!important}
+.face-ocean{background:url('ocean.svg') center/cover no-repeat!important}
+.face-flow{background:radial-gradient(ellipse at 75% 15%,#ef9d9b,transparent 43%),radial-gradient(ellipse at 12% 90%,#536af5,transparent 50%),linear-gradient(145deg,#101839,#574077 60%,#121a3c)!important}
+.face-night{background:#050507!important;color:#a28e7c!important}.face-night::before{display:none}
+.face-clock-wrap{width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(8px,2vh,20px);padding:env(safe-area-inset-top) 5vw env(safe-area-inset-bottom);text-align:center}
+.face-date{font-size:clamp(18px,3vw,38px);font-weight:500;letter-spacing:-.025em;color:#ffffffe0;text-shadow:0 2px 18px #0003}
+.face-time{font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;font-variant-numeric:tabular-nums;font-weight:700;font-size:clamp(85px,30vw,360px);line-height:.9;letter-spacing:-.095em;padding-right:.09em;color:#ffffffb8;text-shadow:0 2px 30px #fff2;-webkit-text-stroke:1px #ffffff30}
+.face-night .face-time{color:#a28e7c;text-shadow:none;-webkit-text-stroke:0;font-weight:300}.face-night .face-date,.face-night .face-widget{color:#907c6d;text-shadow:none}
+.face-widgets{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 28px;max-width:90%;margin-top:14px}.face-widget{display:flex;align-items:center;gap:8px;font-size:clamp(14px,2vw,24px);color:#ffffffe0;text-shadow:0 2px 10px #0008}.face-widget .icon{width:1.1em;height:1.1em}
+.face-editor{position:absolute;bottom:max(20px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:min(720px,94vw);max-height:90dvh;overflow:auto;touch-action:pan-y;background:#141825ed;border:1px solid #ffffff32;border-radius:28px;padding:20px;box-shadow:0 18px 65px #0007;backdrop-filter:blur(30px);color:white;text-align:left}.face-editor-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.face-editor-head h2{margin:0;font-size:23px}.face-editor-head button,.face-back{background:#ffffff19;border-radius:18px;padding:10px 18px}.face-options{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.face-swatch{border:2px solid transparent;border-radius:14px;min-height:90px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;color:white}.face-swatch.selected{border-color:#b9c7ff}.face-swatch span{font-size:clamp(15px,3vw,28px);font-weight:650}.face-swatch small{font-size:12px}.face-toggles{display:flex;flex-wrap:wrap;gap:12px 24px;margin:18px 0}.face-toggles label{display:flex;align-items:center;gap:7px;font-size:14px}.face-toggles input{accent-color:#a9a5ff;width:20px;height:20px}.face-back{width:100%}
+@media(max-height:500px){.face-time{font-size:clamp(80px,32vh,190px)}.face-clock-wrap{gap:7px}.face-widgets{margin-top:4px}}
