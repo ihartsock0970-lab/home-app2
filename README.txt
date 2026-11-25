@@ -1,4 +1,2 @@
-Home v0.9.1 / Build 091
-Upload all files to the existing GitHub Pages repository. Export a backup first and update both devices together.
-Recurring weekday schedules use Sunday-based weeks; monthly/yearly recurrence skips dates not present in a month/year. Individual edits create a standalone record and exclude the original occurrence. Overdue section shows unfinished dated nonrecurring tasks; recurring tasks still display the current occurrence. Existing Supabase schema and local keys unchanged.
-Preview is separate from the production origin; do not use it as your live data store.
+Home v0.9.2 (build 092)
+Upload the contents of this ZIP to the existing GitHub Pages repository. Export a backup first and update both devices. No schema changes. Existing storage keys and app icons retained. Today is available via sidebar, More, or Quick add. Swipe a task right to toggle completion; left or long-press to show actions. Syntax checked; browser navigation blocked, so device testing required.
