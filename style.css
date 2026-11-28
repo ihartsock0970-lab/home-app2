@@ -566,3 +566,5 @@ html:not(.phone-ui) #editor.editor-sheet091 .repeat-details091{gap:0}
 html:not(.phone-ui) #editor.editor-sheet091 .weekdays091{padding:12px 0}
 html:not(.phone-ui) #editor.editor-sheet091 .weekday-buttons091{max-width:340px;margin:8px auto 0}
 html:not(.phone-ui) #editor.editor-sheet091 .weekday-buttons091 label{min-height:0!important;max-height:44px;width:100%;max-width:44px;justify-self:center}
+
+.lifx-colors098{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}.lifx-swatch098{width:36px;height:36px;border-radius:50%;border:1px solid #ffffff55;min-width:36px}.focus-ring{aspect-ratio:1!important;width:min(100%,160px)!important;height:auto!important;flex:none!important}.focus-inner{aspect-ratio:1!important}
