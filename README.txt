@@ -1,5 +1,5 @@
-Home v1.1.1 requires the home-pin Edge Function, HOME_APP_PIN secret and home-pin-setup.sql. See setup instructions supplied separately.
-Home v1.1.1 / Build 111
+Home v1.1.3 requires the home-pin Edge Function, HOME_APP_PIN secret and home-pin-setup.sql. See setup instructions supplied separately.
+Home v1.1.3 / Build 113
 Replace all files in the existing GitHub Pages repository.
 Application-wide automatic ambient display on iPad; editors remain protected.
 Existing storage keys and synchronization schema unchanged.
@@ -23,3 +23,7 @@ Lighting studio: scenic wallpaper retained, selected-bulb color/white controls, 
 110: Full-screen morning and evening briefings reuse the selected dashboard wallpaper, with live saved task, event, goal, habit and weather data. Configure under Settings > Morning & Bedtime. Automatic briefings default to enabled on iPad (7 AM and 10 PM, or prior routine times) and disabled on other devices. They may appear within an hour of the chosen time, once per day, only while Home is active and unlocked. Tap the greeting or dismissal button, or swipe up on the greeting, to return to Home. Lighting schedules remain independent. Manual briefings also available in Today. Touch-opened dialog buttons suppress unwanted focus outlines; keyboard navigation retains visible focus. No database changes.
 
 111: startup cover remains until PIN session restoration finishes; editable local bulb aliases; consistent dialog controls.
+
+112: Automatic ambient entry respects the configured inactivity timeout day and night; bedtime changes appearance without forcing ambient entry. Page restoration starts a fresh inactivity interval.
+
+113: Phone dock selection slides between tabs; reduced motion respected. Cloud scheduler integration is not included in this dock-only build.
