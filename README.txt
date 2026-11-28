@@ -1,4 +1,4 @@
-Home v1.0.3 / Build 103
+Home v1.0.4 / Build 104
 Replace all files in the existing GitHub Pages repository.
 Application-wide automatic ambient display on iPad; editors remain protected.
 Existing storage keys and synchronization schema unchanged.
