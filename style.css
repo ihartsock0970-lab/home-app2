@@ -624,3 +624,23 @@ html.phone-ui body .shell aside #nav::before{content:'';position:absolute;pointe
 html.phone-ui body .shell aside #nav .navbtn{position:relative;z-index:1;transition:color 220ms ease;}
 html.phone-ui body .shell aside #nav .navbtn.active{background:transparent!important;border-color:transparent!important;box-shadow:none!important}
 @media(prefers-reduced-motion:reduce){html.phone-ui body .shell aside #nav::before,html.phone-ui body .shell aside #nav .navbtn{transition:none!important}}
+
+/* 115 — accessible animated schedule controls, isolated from bulb switches. */
+.schedules109 .schedule-row109 button.schedule-switch115{appearance:none!important;-webkit-appearance:none!important;display:block!important;position:relative!important;box-sizing:border-box!important;width:52px!important;min-width:52px!important;max-width:52px!important;height:32px!important;min-height:32px!important;padding:0!important;border:1px solid #ffffff25!important;border-radius:999px!important;background:#636b79!important;box-shadow:inset 0 1px 3px #0002!important;flex:0 0 52px!important;touch-action:manipulation;transition:background-color .28s ease,border-color .28s ease;cursor:pointer}
+.schedules109 .schedule-row109 button.schedule-switch115.on103{background:#9275ef!important;border-color:#b29aff!important}
+.schedules109 .schedule-row109 button.schedule-switch115 i{position:absolute!important;display:block!important;left:3px!important;top:3px!important;width:24px!important;height:24px!important;border-radius:50%!important;background:#fff!important;box-shadow:0 2px 5px #0003;transform:translateX(0);transition:transform .28s cubic-bezier(.22,.8,.24,1)}
+.schedules109 .schedule-row109 button.schedule-switch115.on103 i{transform:translateX(20px)}
+.schedules109 .schedule-row109 button.schedule-switch115:focus-visible{outline:2px solid #c3b4ff!important;outline-offset:3px}
+.schedules109 .schedule-row109 button.schedule-switch115[aria-busy=true]{cursor:progress;opacity:1!important}
+.schedules109 .schedule-row109 button.schedule-switch115:disabled:not([aria-busy=true]){opacity:.45!important;cursor:default}
+.schedules109 [data-schedule109=new]{transition:transform .16s ease,background-color .16s ease;touch-action:manipulation}.schedules109 [data-schedule109=new]:active{transform:scale(.95)}
+.schedule-dialog109.schedule-enter115[open]{animation:schedule-enter115 .34s cubic-bezier(.2,.75,.25,1) both}.schedule-dialog109.schedule-enter115[open]::backdrop{animation:schedule-backdrop115 .28s ease both}
+@keyframes schedule-enter115{from{opacity:0;transform:translateY(28px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes schedule-backdrop115{from{opacity:0}to{opacity:1}}
+.schedule-dialog109 .schedule-enabled109 input{transition:background-color .28s ease}.schedule-dialog109 .schedule-enabled109 input:before{transition:transform .28s cubic-bezier(.22,.8,.24,1)}
+@media(prefers-reduced-motion:reduce){.schedules109 .schedule-row109 button.schedule-switch115,.schedules109 .schedule-row109 button.schedule-switch115 i,.schedules109 [data-schedule109=new],.schedule-dialog109 .schedule-enabled109 input,.schedule-dialog109 .schedule-enabled109 input:before{transition:none!important}.schedule-dialog109.schedule-enter115[open],.schedule-dialog109.schedule-enter115[open]::backdrop{animation:none!important}}
+
+/* 116: eight entertainment launchers fit in one tablet row. */
+html.tablet-device body[data-page=overview] .shell #appDock:not([hidden]){gap:clamp(6px,1.5vw,22px)!important;padding-inline:clamp(10px,2vw,20px)!important;max-width:calc(100% - 12px)!important;box-sizing:border-box}
+html.tablet-device body[data-page=overview] .shell #appDock .app-icon{width:clamp(32px,min(7dvh,8vw),60px)!important;height:clamp(32px,min(7dvh,8vw),60px)!important}
+.dock-app:has(.app-youtube){--app-glow:#ff0033}.dock-app:has(.app-appletv){--app-glow:#a5b8e5}.app-youtube{background:#fff;color:#ff0033}.app-appletv{background:#161616;color:white}
