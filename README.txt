@@ -1,5 +1,5 @@
-Home v1.0.6 requires the home-pin Edge Function, HOME_APP_PIN secret and home-pin-setup.sql. See setup instructions supplied separately.
-Home v1.0.6 / Build 106
+Home v1.0.8 requires the home-pin Edge Function, HOME_APP_PIN secret and home-pin-setup.sql. See setup instructions supplied separately.
+Home v1.0.8 / Build 108
 Replace all files in the existing GitHub Pages repository.
 Application-wide automatic ambient display on iPad; editors remain protected.
 Existing storage keys and synchronization schema unchanged.
@@ -15,3 +15,5 @@ Email code setup: change Magic Link and Reset Password email templates to contai
 Lighting test: deploy the separate lifx-control-test.ts as the existing lifx-control Edge Function, set HOME_LIGHT_TEST_CODE to a private random code of at least 24 characters, and HOME_LIGHT_TEST_UNTIL to an ISO UTC expiry timestamp. Legacy JWT verification must be OFF. Open Lighting > Connect lighting test. Test code stays in memory only; normal account sign-in remains available. Remove both test secrets after testing.
 
 Lighting studio: scenic wallpaper retained, selected-bulb color/white controls, expandable scene library, individual quick controls. No backend changes.
+
+108: goal categories, deadlines, notes, milestones, manual progress history, linked activity and habits; scheduled quantitative habits, skip days, streaks, history; rolling period Insights and custom local activity categories. Derived linked progress uses stored records; no database migration. Lighting hero shows selected scene or custom state, power is separate, white-temperature dial is visual with slider control. No scheduled lighting automations in this build.
