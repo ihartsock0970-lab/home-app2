@@ -1,12 +1,12 @@
-Home v1.0.9 requires the home-pin Edge Function, HOME_APP_PIN secret and home-pin-setup.sql. See setup instructions supplied separately.
-Home v1.0.9 / Build 109
+Home v1.1.0 requires the home-pin Edge Function, HOME_APP_PIN secret and home-pin-setup.sql. See setup instructions supplied separately.
+Home v1.1.0 / Build 110
 Replace all files in the existing GitHub Pages repository.
 Application-wide automatic ambient display on iPad; editors remain protected.
 Existing storage keys and synchronization schema unchanged.
 
 Session persistence: project defaults are prefilled; sign in once per device. Existing sessions and local data are preserved. A revoked session or deleted site data requires signing in again. Startup recovery reloads without clearing storage.
 
-LIFX: requires deployed lifx-control Edge Function, LIFX_API_TOKEN and HOME_OWNER_UID secrets, owner sign-in. Lighting scenes target discovered lights in the Bedroom Lights group. No token in frontend. Focus and scheduled routines do not automatically change lights in this release.
+LIFX: requires deployed lifx-control Edge Function, LIFX_API_TOKEN and HOME_OWNER_UID secrets, owner sign-in. Lighting scenes target discovered lights in the Bedroom Lights group. No token in frontend. Focus does not automatically change lights. Device-local lighting schedules can activate saved scenes while Home is open.
 
 Password recovery: set Supabase Authentication > URL Configuration > Site URL and Redirect URLs to https://ihartsock0970-lab.github.io/home-app2/ . Use Forgot password on the hosted app or request a fresh dashboard recovery email after deploying. Default implicit recovery links supported; custom PKCE links require a different flow. Recovery tokens are held in memory, not normal session storage; do not reload the reset screen. After reset sign in with the new password.
 
@@ -19,3 +19,5 @@ Lighting studio: scenic wallpaper retained, selected-bulb color/white controls, 
 108: goal categories, deadlines, notes, milestones, manual progress history, linked activity and habits; scheduled quantitative habits, skip days, streaks, history; rolling period Insights and custom local activity categories. Derived linked progress uses stored records; no database migration. Lighting hero shows selected scene or custom state, power is separate, white-temperature dial is visual with slider control. No scheduled lighting automations in this build.
 
 109: simplified goal/habit forms; existing notes and milestones preserved. Lighting schedules are device-local and run only while Home is visible, authenticated and online (ambient clock included). Enable on one device; missed times are not replayed. No cloud scheduler.
+
+110: Full-screen morning and evening briefings reuse the selected dashboard wallpaper, with live saved task, event, goal, habit and weather data. Configure under Settings > Morning & Bedtime. Automatic briefings default to enabled on iPad (7 AM and 10 PM, or prior routine times) and disabled on other devices. They may appear within an hour of the chosen time, once per day, only while Home is active and unlocked. Tap the greeting or dismissal button, or swipe up on the greeting, to return to Home. Lighting schedules remain independent. Manual briefings also available in Today. Touch-opened dialog buttons suppress unwanted focus outlines; keyboard navigation retains visible focus. No database changes.
