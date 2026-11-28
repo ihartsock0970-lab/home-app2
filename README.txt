@@ -1,5 +1,5 @@
-Home v1.0.5 requires the home-pin Edge Function, HOME_APP_PIN secret and home-pin-setup.sql. See setup instructions supplied separately.
-Home v1.0.5 / Build 105
+Home v1.0.6 requires the home-pin Edge Function, HOME_APP_PIN secret and home-pin-setup.sql. See setup instructions supplied separately.
+Home v1.0.6 / Build 106
 Replace all files in the existing GitHub Pages repository.
 Application-wide automatic ambient display on iPad; editors remain protected.
 Existing storage keys and synchronization schema unchanged.
